@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrito de Compras</title>
+    <style>
+        /* Agrega tus estilos CSS aquí */
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+        }
+        .product {
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px; /* Ancho de cada celda de producto */
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+        }
+        .cart {
+    padding: 10px;
+    margin: 10px;
+    float: center;
+    width: 400px; /* Ancho del contenedor del carrito */
+    text-align: center;
+        }
+        .cart table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        .cart th, .cart td {       
+            padding: 8px;
+            text-align: left;
+        }
+    .banner {    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+    </style>
+</head>
+<body>
+<div class="banner"> <a href="INDEX.html"><img src="LOGO ENCABEZAD Y BANNER/encabezado.png" alt="Encabezado" width="1350"></a> </div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="products">
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/__CLAY_____-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3>Decoración de perrito</h3>
+    <p>Precio: S/.20</p>
+    <span style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif">
+    <button onclick="addToCart('Decoración de perrito', 20)">Agregar al Carrito</button>
+  </span></div>
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/Cat-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3>Porta joyas de Totoro</h3>
+    <p>Precio: s/.15</p>
+    <button onclick="addToCart('Porta joyas de Totoro', 15)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/2eeb3096-2239-452f-96f6-bb2fbce8d2d0-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3>Taza capibara</h3>
+    <p>Precio: s/.15</p>
+    <button onclick="addToCart('Taza capibara', 15)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/1ffd738f-849b-42af-918d-d3e71da15d9e.jpeg" width="158" height="166" alt=""/></h3>
+    <h3>Calendario perpetuo Totoro</h3>
+    <p>Pr<span style="text-align: center">ecio: s/.20</span></p>
+    <span style="text-align: center">
+    <button onclick="addToCart('Calendario perpetuo Totoro', 20)">Agregar al Carrito</button>
+  </span></div>
+  <span style="text-align: center">
+  <!-- Agrega más productos aquí -->
+  </span></div>
+<div class="products">
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/acfc58db-282b-4ec7-8536-fd7371d91f29.jpeg" width="158" height="166" alt=""/></h3>
+    <h3>Decoración</h3>
+    <p>Precio: s/.25</p>
+    <button onclick="addToCart('Decoración', 25)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/cbb853e9-e0e2-4641-8f60-70c45f121ea9.jpeg" width="158" height="166" alt=""/></h3>
+    <h3>Calendario perpetuo Calciner</h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Calendario perpetuo Calciner', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/clay cat calender.jpeg" width="158" height="166" alt=""/></h3>
+    <h3>Calendario perpetuo Jiji</h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Calendario perpetuo Jiji', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/bd2053f1-aa82-4792-9cae-f0535ced532f.jpeg" width="158" height="166" alt=""/></h3>
+    <h3>Portajoyero Capibara</h3>
+    <p>Pr<span style="text-align: center">ecio: s/.20</span></p>
+    <span style="text-align: center">
+    <button onclick="addToCart('Portajoyero Capibara', 20)">Agregar al Carrito</button>
+    </span></div>
+  <span style="text-align: center">
+    <!-- Agrega más productos aquí -->
+  </span></div>
+<div class="products">
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/dcf78e87-6380-4a0f-905e-8f69fabb2794.jpeg" width="158" height="166" alt=""/></h3>
+    <h3>Calendario perpetuo de patito</h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Calendario perpetuo de patito', 50)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/not mine.jpeg" width="158" height="166" alt=""/></h3>
+    <h3>Calendario perpetuo de ranita</h3>
+    <p>Precio: s/.18</p>
+    <button onclick="addToCart('Calendario perpetuo de ranita', 8)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/94b4d88b-bf89-49cb-861d-9071caaa026c.jpeg" width="158" height="166" alt=""/></h3>
+    <h3>Pines de cerámica</h3>
+    <p>Precio: s/.8</p>
+    <button onclick="addToCart('Pines de cerámica', 8)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Cerámica/Ceramics.jpeg" width="158" height="166" alt=""/></h3>
+    <h3>Porajoyero de gato</h3>
+    <p>Pr<span style="text-align: center">ecio: s/.15</span></p>
+    <span style="text-align: center">
+    <button onclick="addToCart('Porajoyero de gato', 15)">Agregar al Carrito</button>
+    </span></div>
+  <span style="text-align: center">
+    <!-- Agrega más productos aquí -->
+  </span></div>
+<div class="products">
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/_33.jpeg" width="169" height="166" alt=""/></h3>
+    <h3>Guantes de hongos</h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Guantes de hongos', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/_nashthe_yarnman-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3>Peluche de patito</h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('eluche de patito', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/0eb35394-a6a0-4dd4-8675-e34c3e45106b.jpeg" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Guantes de corazón</span></h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Guantes de corazón', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/1f6f9a62-f7d2-411f-b2f0-8f5ffaee3eca-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;">Sombrero de fresas</span></h3>
+    <p>Pr<span style="text-align: center">ecio: s/.15</span></p>
+    <span style="text-align: center">
+    <button onclick="addToCart('Sombrero de fresas', 15)">Agregar al Carrito</button>
+    </span></div>
+  <span style="text-align: center">
+    <!-- Agrega más productos aquí -->
+  </span></div>
+<div class="products">
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/7a25fe5f-736a-4ac4-b148-addbae6cd0fe-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3>Peluche Cinnamorol</h3>
+    <p>Precio: s/.25</p>
+    <button onclick="addToCart('Peluche Cinnamorol', 25)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/08e2d1de-f50a-4b18-88ed-79552eb9112c-removebg-preview.png" width="148" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Vincha de flores</span></h3>
+    <p>Precio: s/.12</p>
+    <button onclick="addToCart('Vincha de flores', 12)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/9f17dc60-e66c-4667-a74a-0a1687d19ffe-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Funda de airpods</span></h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Funda de airpods', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/55f7f63d-38f6-419b-80ad-d53a51e784fd.jpeg" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Guantes de corazón</span></h3>
+    <p>Pr<span style="text-align: center">ecio: s/.15</span></p>
+    <span style="text-align: center">
+    <button onclick="addToCart('Guantes de corazón', 15)">Agregar al Carrito</button>
+    </span></div>
+  <span style="text-align: center">
+    <!-- Agrega más productos aquí -->
+  </span></div>
+<div class="products">
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/960ed3f5-d9e6-4431-a740-23eb2dfb6af7.jpeg" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;"><span style="text-align: center">Funda de airpods de osito</span></span></h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Funda de airpods de osito, 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/1495ceb2-656e-4c0b-9c72-bb6168f3531f-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3>Peluche de conejito</h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Peluche de conejito', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/5271bb85-8f8c-4246-85c3-0d3336101c5b-removebg-preview.png" width="147" height="166" alt=""/></h3>
+    <h3>Peluche de ranita</h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Peluche de ranita', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/Accesorios_que_puedes_crear_si_amas_tejer-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Traje de headphones</span></h3>
+    <p>Pr<span style="text-align: center">ecio: s/.18</span></p>
+    <span style="text-align: center">
+    <button onclick="addToCart('Traje de headphones', 18)">Agregar al Carrito</button>
+    </span></div>
+  <span style="text-align: center">
+    <!-- Agrega más productos aquí -->
+  </span></div>
+<div class="products">
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/Crochet Bunny AirPods Case.jpeg" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;"><span style="text-align: center">Funda de airpods</span> de conejitos</span></h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Funda de airpods de conejitos', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/Crochet Ideas.jpeg" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif;"><span style="text-align: center">Funda de airpods</span> oso polar</span></h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Funda de airpods oso polar', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/Crocheted bear ears airpods case - halloween astethic wallpaper.jpeg" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Funda de airpods de obejita</span></h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Funda de airpods de obejita', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/d7d4961d-31ea-495c-9b00-4eb6803955e5-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Funda de airpods de hongo</span></h3>
+    <p>Pr<span style="text-align: center">ecio: s/.20</span></p>
+    <span style="text-align: center">
+    <button onclick="addToCart('Funda de airpods de hongo', 20)">Agregar al Carrito</button>
+    </span></div>
+  <span style="text-align: center">
+    <!-- Agrega más productos aquí -->
+  </span></div>
+<div class="products">
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/e9616178-a7d8-46fd-a1c8-615bbea54046.jpeg" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Guantes rojos</span></h3>
+    <p>Precio: s/.18</p>
+    <button onclick="addToCart('Guantes rojos', 18)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/f4fb0e46-e81e-4671-8d4c-302fcc07762f-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Funda de airpods Rilakuma</span></h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Funda de airpods Rilakuma', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/I_Crochet_Toys_Inspired_By_Various_Animals__39_Pics_-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3>Peluche de Cinnamorol</h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Peluche de Cinnamorol', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/Not_mine_but_amazing-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Peluche de patito</span></h3>
+    <p>Pr<span style="text-align: center">ecio: s/.20</span></p>
+    <span style="text-align: center">
+    <button onclick="addToCart('Peluche de patito', 20)">Agregar al Carrito</button>
+    </span></div>
+  <span style="text-align: center">
+    <!-- Agrega más productos aquí -->
+  </span></div>
+<div class="products">
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/Ⱈⰵⱜⱅⰵⱃ___komok__kashi____Instagram_photos_and_videos-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Funda de airpods de patito</span></h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Funda de airpods de patito', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/𝑘𝑛𝑖𝑡𝑡𝑖𝑛𝑔_𝑖𝑑𝑒𝑎𝑠____-removebg-preview.png" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Traje para cargador</span></h3>
+    <p>Precio: s/.20</p>
+    <button onclick="addToCart('Traje para cargador', 20)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <h3><img src="INSUMOS/Crochet/🌷🌷🌷.jpeg" width="158" height="166" alt=""/></h3>
+    <h3><span style="text-align: center">Peluche de conejo de tulipanes</span></h3>
+    <p>Precio: s/.22</p>
+    <button onclick="addToCart('Peluche de conejo de tulipanes', 22)">Agregar al Carrito</button>
+  </div>
+  <span style="text-align: center">
+    <!-- Agrega más productos aquí -->
+  </span></div>
+<p>&nbsp;</p>
+<div class="cart">
+  <h3>Carrito de Compras</h3>
+        <table align="center">
+            <thead>
+                <tr>
+                    <th style="text-align: center">Producto</th>
+                    <th style="text-align: center">Precio</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Los productos agregados al carrito aparecerán aquí -->
+            </tbody>
+        </table>
+        <p>Total: S/.<span id="total">0</span></p>
+</div>
+
+    <script>
+        // JavaScript para manejar el carrito de compras
+        let cart = [];
+        let total = 0;
+
+        function addToCart(productName, price) {
+            if (cart.length < 4) {
+                cart.push({ name: productName, price: price });
+                total += price;
+                updateCart();
+            } else {
+                alert("El carrito está lleno. No se pueden agregar más productos.");
+            }
+        }
+
+        function updateCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+            cart.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td>S/. ${item.price}</td>
+                `;
+                cartItemsContainer.appendChild(row);
+            });
+            document.getElementById('total').innerText = total;
+        }
+    </script>
+</body>
+</html>
